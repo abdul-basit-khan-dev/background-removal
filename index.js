@@ -13,6 +13,11 @@ const upload = multer({ dest: 'uploads/' });
 
 app.use(bodyParser.json({ limit: '50mb' }));
 
+
+app.get("/", (req, res) => {
+	res.json({ message: "Welcome to NodeJS Authtication API's." });
+});
+
 app.post('/remove-background', upload.single('image'), async (req, res) => {
     try {
         const imgPath = req.file.path;
