@@ -1,3 +1,20 @@
 {
-	"siteId": "dea1b34a-bb4b-4640-b008-b6795ad66c13"
+	"siteId": "dea1b34a-bb4b-4640-b008-b6795ad66c13",
+	"geolocation": {
+		"data": {
+			"city": "Faisalabad",
+			"country": {
+				"code": "PK",
+				"name": "Pakistan"
+			},
+			"subdivision": {
+				"code": "PB",
+				"name": "Punjab"
+			},
+			"timezone": "Asia/Karachi",
+			"latitude": 31.3709,
+			"longitude": 73.0336
+		},
+		"timestamp": 1719330027648
+	}
 }
