@@ -62,7 +62,15 @@
 // }
 
 // module.exports = app;
-const express = require("express");
-const app = express();
-app.get("/", (req, res) => { res.send("Express on Vercel"); });
-const PORT = process.env.PORT || 5000; app.listen(PORT, () => { console.log(`Server is running on port ${PORT}`); });
+import express, { Router } from "express";
+import serverless from "serverless-http";
+
+const api = express();
+
+const router = Router();
+router.get("/hello", (req, res) => res.send("Hello World!"));
+
+api.use("/api/", router);
+
+export const handler = serverless(api);
+
