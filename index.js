@@ -6,7 +6,7 @@ const path = require('path');
 const schedule = require('node-schedule');
 
 const app = express();
-const port =  5001;
+const port =  3001;
 
 // Setting up multer for file upload handling
 const upload = multer({ dest: 'uploads/' });
