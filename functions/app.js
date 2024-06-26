@@ -61,22 +61,15 @@
 //     });
 // }
 
-// module.exports = app;
 const express = require("express");
 const serverless = require("serverless-http");
-
 const app = express();
 const router = express.Router();
 
 router.get("/", (req, res) => {
-  res.set('Cache-Control', 'no-store');
-  res.json({
-    hello: "hi!"
-  });
+    res.send("App is running..");
 });
 
-app.use(`/`, router);
-
-module.exports = app;
+app.use("/.netlify/functions/app", router);
 module.exports.handler = serverless(app);
 
