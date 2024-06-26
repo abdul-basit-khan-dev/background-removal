@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "./node_modules/.bin/netlify-lambda serve src",
-    "build": "netlify deploy --prod"
+    "build": "webpack --config webpack.config.js",
+    "deploy": "netlify-lambda build functions-build"
   },
   "keywords": [],
   "author": "",
@@ -20,5 +20,11 @@
     "node-schedule": "^2.1.1",
     "path": "^0.12.7",
     "serverless-http": "^3.2.0"
+  },
+  "devDependencies": {
+    "webpack": "^5.92.1",
+    "webpack-bundle-analyzer": "^4.10.2",
+    "webpack-cli": "^5.1.4",
+    "webpack-node-externals": "^3.0.0"
   }
 }
