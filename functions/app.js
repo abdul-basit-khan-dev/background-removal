@@ -70,6 +70,6 @@ router.get("/", (req, res) => {
     res.send("App is running..");
 });
 
-app.use("/.netlify/functions/app", router);
+app.use("/", router);
 module.exports.handler = serverless(app);
 
