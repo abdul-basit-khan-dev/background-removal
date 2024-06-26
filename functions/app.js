@@ -48,7 +48,7 @@ router.post('/remove-background', upload.single('image'), async (req, res) => {
     }
 });
 
-app.use("/.netlify/functions/app", (req, res, next) => {
+app.use("/", (req, res, next) => {
   console.log(`Received a ${req.method} request at ${req.originalUrl}`);
   next();
 }, router);
@@ -64,5 +64,3 @@ function scheduleDeletion(filePath, milliseconds) {
 }
 
 module.exports.handler = serverless(app);
-
-
